@@ -1,0 +1,28 @@
+﻿@model BakeMyWorld.Website.Models.Domain.Cart
+
+<link rel="stylesheet" href="~/css/components/category-components.css" />
+<h1 class="text-center main-content">Products In Your Shopping Cart:</h1>
+
+
+<div class="grid-container product-grid">
+    @foreach (var cartItem in Model.Items.Values)
+     {
+        <div class="product-container">
+            <img class="product-img"
+                 src="@cartItem.Cake.ImageUrl"
+                 alt="product" />
+            <div class="h-container justify-content-between">
+                <span class="product-name">@cartItem.Cake.Name</span>
+                <span class="product-name">@cartItem.Cake.Price SEK</span>
+            </div>
+            <div class="h-container justify-content-between">
+                <p>Quantity: </p>
+                <p>@cartItem.Quantity</p>
+            </div>
+        </div>
+     }
+</div>
+<h3 class="text-center main-content">Total Price: @Model.CalculatePrice() SEK</h3>
+<a asp-area="" asp-controller="Order" asp-action="Checkout"><h1 class="text-center main-content">Proceed to Checkout</h1></a>
+
+

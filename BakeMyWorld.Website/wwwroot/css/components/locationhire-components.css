@@ -1,0 +1,159 @@
+.main-content {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.hero-img{
+    opacity: 0.7;
+    height: 35vw;
+}
+
+
+
+.side-pictures {
+    width: 50vw;
+    height: 645px;
+    opacity: 0.5;
+}
+
+.location-intro-text {
+    text-align:start;
+    margin-top: 5%;
+    padding-left: 10px;
+}
+
+.category-list-container  {
+    width: 80vw;
+}
+
+.category-list-container ul {
+    margin-top: 5px;
+    list-style-type: none;
+}
+
+.category-list-container ul li {
+    padding: 15px;
+    border: 0.3px solid grey;
+    background-color: rgb(253, 249, 249);
+}
+
+.category-list-container ul li:hover {
+    background-color: rgb(252, 181, 181);
+}
+.sidebar-container {
+    width: 60vw;
+  }
+  
+  .sidebar-container ul {
+    margin-top: 10px;
+    list-style-type: none;
+  }
+  
+  .sidebar-container ul li {
+    padding: 15px;
+    background-color: rgb(253, 249, 249);
+    text-align: center;
+  }
+  
+  .sidebar-container ul li:hover {
+    background-color: rgb(252, 181, 181);
+  }
+
+  .cake-img{
+      width: 250px;
+      height: 250px;
+  }
+
+
+.emergency-contact-container {
+    margin: 30px;
+    align-self: center;
+    text-align: center;
+    padding: 7px;
+    width: 22.3vw;
+    background-color: white;
+    box-shadow: rgb(177, 177, 177) 10px 10px;
+}
+
+.information-block > * {
+    margin: 4.5%;
+    align-self: center;
+}
+
+
+.classes-information-block {
+    width: 140vw;
+}
+
+.classes-information-block-title {
+    text-align: center;
+}
+
+.classes-information-block > * {
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+
+.class-button {
+    width: 150px;
+    height: 60px;
+    border: 1px solid black;
+    background-color:  rgb(252, 181, 181);
+    box-shadow: grey 5px 5px;
+    padding: 15px;
+    text-align: center;
+    font-size: auto;   
+}
+
+.class-button:hover {
+    background-color: white;
+}
+
+.application-button {
+    align-self: center;
+    width: 180px;
+    height: 60px;
+    border: 1px solid black;
+    background-color:  rgb(252, 181, 181);    
+    text-align: center;
+    font-size: auto;   
+}
+
+.application-button:hover {
+    background-color: white;
+}
+
+.button-icons {
+    font-size: 18px;   
+}
+
+
+@media only screen and (max-width: 896px) {
+    .hero-text {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    main > * > * {
+        width: 100%;
+    }
+    
+    .main-content > * {
+        margin: 2%;
+        width: 96%;
+    }
+
+    .main-content > * > * {
+        margin: 2%;
+        width: 96%;
+    }
+}
+

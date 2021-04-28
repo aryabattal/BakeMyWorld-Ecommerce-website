@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Bake My World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/global-style.css" />
+</head>
+<body>
+    <header>
+        <div class="h-container">
+            <div class="v-container search-bar-container">
+                <form class="v-container search-bar-container" asp-controller="SearchResult" asp-action="Index">
+                    <input class="search-bar"
+                           type="search"
+                           name="q"
+                           placeholder="Search...  "
+                           required />
+                    <i class="material-icons left-on-top">search</i>
+                </form>
+            </div>
+
+            <div class="v-container align-items-central">
+                <div class="h-container shopping-cart-icon-container">
+                    <i class="material-icons">shopping_cart</i>
+                    <div id="online-status"></div>
+                </div>
+                <div class="h-container account-links-container">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="account-link">Home</a>
+                    <a asp-area="" asp-controller="AdminLogin" asp-action="Index" class="account-link" id="login-switcher">Admin</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-container stick-central">
+            <nav class="global-navigation">
+                <ul>
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Index">Order online</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="VisitUs">Visit us</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="BakingClasses">Classes</a></li>
+
+                    <li class="logo-holder">
+                        <img class="logo-image align-items-central"
+                             src="https://www.eatlogos.com/Entertainment_logos/png/vector_cake_food_logo.png"
+                             alt="logo-img" />
+                    </li>
+
+                    <li><a asp-area="" asp-controller="Corporates" asp-action="Index">Corporate</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="LocationHire">Location hire</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="AboutUs">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="carouselExampleCaptions"
+         class="carousel slide"
+         data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"></li>
+            <li data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/originals/31/0f/d8/310fd8a334837f390ca3b03b114433cc.jpg"
+                     class="d-block w-100"
+                     alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Bake the world a better place!</h1>
+                    <p>"Remember, no matter what life throws at us, we can always bake a cake!" ~ Sarah Ban Breathnach</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="http://www.sixcleversisters.com/wp-content/uploads/2017/04/raspberry_vanilla_mini_cakes-4.11.jpg"
+                     class="d-block w-100"
+                     alt="..." />
+                <div class="carousel-caption d-none d-md-block" style="color:black;">
+                    <h1>Bake the world a better place!</h1>
+                    <p>"There is something in the red of a raspberry that looks as good to a man as the red in a sheep looks to a wolf." ~ E. W. Howe</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://avatars.mds.yandex.net/get-zen_doc/1574327/pub_5d6cf8f746f4ff00ac2c0fdf_5d6cfa02df944400acbcbfa5/scale_1200"
+                     class="d-block w-100"
+                     alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Bake the world a better place!</h1>
+                    <p>"Instead of past, present and future, I'd prefer chocolate, vanilla, and strawberry." ~ Ashleigh Brilliant</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev"
+           href="#carouselExampleCaptions"
+           role="button"
+           data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next"
+           href="#carouselExampleCaptions"
+           role="button"
+           data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+
+    <main>
+        @RenderBody()
+    </main>
+
+
+    <footer class="v-container stick-central">
+        <div class="h-container stick-central">
+            <div class="v-container align-items-central">
+                <p class="big-headline">PURCHASE GIFT VOUCHERS</p>
+                <p>Choose from a range of gifts & vouchers</p>
+                <i class="material-icons">card_giftcard</i>
+                <a class="purchase-link" asp-area="" asp-controller="Categories" asp-action="Index">Purchase</a>
+            </div>
+        </div>
+
+        <div class="h-container stick-central">
+            <i class="material-icons">camera_enhance</i>
+            <i class="material-icons">drafts</i>
+        </div>
+
+        <div class="h-container link-lists stick-central align-items-to-flex-start">
+            <div class="v-container">
+                <a asp-area="" asp-controller="Home" asp-action="VisitUs">OUR STORES</a>
+                <a asp-area="" asp-controller="Home" asp-action="VisitUs">Contact us</a>
+                <a asp-area="" asp-controller="Home" asp-action="VisitUs">Visit us</a>
+            </div>
+            <div class="v-container">
+                <a asp-area="" asp-controller="Categories" asp-action="Index">ORDER ONLINE</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Product Selection</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Spring Bestsellers</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Popular</a>
+            </div>
+            <div class="v-container">
+                <a asp-area="" asp-controller="Categories" asp-action="Index">PRODUCTS</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Butter Cakes</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Pound Cakes</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Biscuit Cakes</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Chiffon Cakes</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Flourless Cakes</a>
+            </div>
+            <div class="v-container">
+                <a asp-area="" asp-controller="Home" asp-action="BakingClasses">CLASSES</a>
+                <a asp-area="" asp-controller="Home" asp-action="PublicClasses">Public Classes</a>
+                <a asp-area="" asp-controller="Home" asp-action="PrivateClasse">Private Classes</a>
+                <a asp-area="" asp-controller="Home" asp-action="SpecialClasses">Special Classes</a>
+            </div>
+            <div class="v-container">
+                <a asp-area="" asp-controller="Corporates" asp-action="Index">GIFT SHOPS</a>
+                <a asp-area="" asp-controller="Home" asp-action="VisitUs">Visit Our Stores</a>
+                <a asp-area="" asp-controller="Categories" asp-action="Index">Personlized Products</a>
+            </div>
+        </div>
+        <div class="h-container bottom-links align-items-to-flex-start">
+            <div class="v-container contact-info-text">
+                <p class="big-headline">Contact</p>
+                <p>Primrose Hill 69 Gloucester Avenue, London NW1 8LD</p>
+                <p>Tel 020 7483 4222</p>
+                <p>WhatsApp 078 0227 5205</p>
+                <p>primrosehill@primrose-bakery.co.uk</p>
+                <p>Opening Hours: Monday-Sunday 9am-5pm.</p>
+            </div>
+
+            <div class="h-container final-about-us-links">
+                <div class="v-container">
+                    <a asp-area="" asp-controller="Home" asp-action="AboutUs">ABOUT US</a>
+                    <a asp-area="" asp-controller="Home" asp-action="OurStory">Our Story</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Press">Press About Us</a>
+                </div>
+                <div class="v-container">
+                    <a asp-area="" asp-controller="Corporates" asp-action="Index">GIFT VOUCHERS</a>
+                    <a asp-area="" asp-controller="Categories" asp-action="Index">Popular</a>
+                    <a asp-area="" asp-controller="Categories" asp-action="Index">Hot prices</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,147 @@
+.main-content {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.hero-img{
+    opacity: 0.50;
+    height: 30vw;
+}
+
+p.hero-text-style {
+    color: rgb(158, 11, 104);
+    font-size: 5.875em;
+  }
+
+  .grid-container {
+    display: grid;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 6%;
+    grid-template-columns: 30% 30% 30%;
+}
+
+.emergency-contact-container {
+    align-self: center;
+    text-align: center;
+    font-weight: lighter;
+    padding: 7px;
+    width: 20vw;
+    background-color: white;
+    box-shadow: rgb(177, 177, 177) 10px 10px;
+    opacity: 0.5;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: center;
+    width: 70%;
+    height: 19vw;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.press-img {
+    width: 100%;
+   border: 2px dashed  palevioletred;
+}
+
+.press-img:hover {
+    opacity: 0.5;
+}
+
+.sidebar-container {
+    width: 90vw;
+  }
+  
+  .sidebar-container ul {
+    margin-top: 2px;
+    list-style-type: none;
+  }
+
+  .sidebar-container ul li {
+    padding: 15px;
+    background-color: rgb(253, 249, 249);
+    text-align: center;
+  }
+  
+  .sidebar-container ul li:hover {
+    background-color: rgb(252, 181, 181);
+  }
+
+  
+  .cake-img{
+      width: 250px;
+      height: 250px;
+  }
+
+
+.emergency-contact-container {
+    margin: 30px;
+    align-self: center;
+    text-align: center;
+    padding: 7px;
+    width: 22.3vw;
+    background-color: white;
+    box-shadow: rgb(177, 177, 177) 10px 10px;
+}
+
+
+
+
+@media only screen and (max-width: 1120px) {
+    .hero-text-style {
+        display: none;
+    }
+
+    .emergency-contact-container {
+        display: none;
+    }
+
+    .sidebar-container {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    main > * > * {
+        width: 100%;
+    }
+    
+    .main-content > * {
+        margin: 2%;
+        width: 96%;
+    }
+
+    .main-content > * > * {
+        margin: 2%;
+        width: 96%;
+    }
+    .hero-text-style {
+        display: none;
+    }
+
+    .grid-container{
+        display: grid;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 6%;
+        grid-template-columns: 100%;
+        width: 90%;
+        height: 70;
+        margin: 2%;
+        align-self: center;
+    }
+}
+

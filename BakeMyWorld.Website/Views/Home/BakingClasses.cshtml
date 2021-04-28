@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "Baking Classes";
+}
+
+
+<link rel="stylesheet" href="~/css/components/classes-components.css" />
+<div class="v-container">
+    <img class="hero-img"
+         src="https://cdn.pixabay.com/photo/2016/07/18/19/28/dessert-1526597__480.jpg"
+         alt="hero-img" />
+    <p class="central-on-top hero-text">
+        Learn To Bake The World A Better Place
+    </p>
+</div>
+
+<div class="h-container main-content justify-content-between align-items-to-flex-start">
+    <div class="v-container category-list-container">
+        <ul>
+            <li><a asp-area="" asp-controller="Categories" asp-action="Index">PRODUCT CATEGORIES</a></li>
+            <li><a  asp-area="" asp-controller="Home" asp-action="BakingClasses">CLASSES</a></li>
+            <li><a  asp-area="" asp-controller="Home" asp-action="PublicClasses">Public Classes</a></li>
+            <li><a  asp-area="" asp-controller="Home" asp-action="PrivateClasses">Private Classes</a></li>
+            <li><a  asp-area="" asp-controller="Home" asp-action="SpecialClasses">Special Classes</a></li>
+            <li><a  asp-area="" asp-controller="Corporates" asp-action="Index">Corporate</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="LocationHire">Location Hire </a></li>
+            <li><a  asp-area="" asp-controller="Home" asp-action="AboutUs">About US</a></li>
+        </ul>
+        <div class="emergency-contact-container">
+            <p>For a cake emergency</p>
+            <p>call our stores</p>
+            <p>PRIMROSE HILL STORE</p>
+            <p>02074834222</p>
+            <p>WhatsApp</p>
+            <p>078 0227 5205</p>
+        </div>
+    </div>
+
+    <div class="v-container classes-information-block">
+        <h2 class="classes-information-block-title">Baking Classes</h2>
+        <p>
+            As one famous Greek philosopher once said "Happiness is a piece of
+            cake" and our bakery classes are a great training of its mastery.
+        </p>
+        <p>
+            Whether you are in a group or going solo, trying to make a cake (and
+            failing) is a great way to spend a Sunday morning or afternoon.
+        </p>
+        <p>
+            Our talented Head Chefs pass on their experience of working in one
+            of London's most popular bakeries, and show you how to ice cupcakes
+            with the Primrose signature swirl. You will be shown how to ice
+            using a palette knife, create masterpieces with piping and best of
+            all, you get to take home all you make in the class!
+        </p>
+        <p>Please click the links below for more details.</p>
+
+        <div class="h-container justify-content-evenly">
+            <div class="h-container align-items-to-flex-start">
+                <div class="class-image-container">
+                    <a class="image-class-link" a  asp-area="" asp-controller="Home" asp-action="PublicClasses">
+                        <img class="class-image"
+                             src="https://takprosto.cc/wp-content/uploads/u/ukrashenie-pirogov/12.jpg"
+                             alt="class-image" />
+                    </a>
+                    <p class="class-title">Public Classes</p>
+                </div>
+            </div>
+
+            <div class="h-container align-items-to-flex-start">
+                <div class="class-image-container">
+                    <a class="image-class-link"  asp-area="" asp-controller="Home" asp-action="PrivateClasses">
+                        <img class="class-image"
+                             src="https://pbs.twimg.com/media/ClFEOQ5UkAAR7Dm.jpg:large"
+                             alt="class-image" />
+                    </a>
+                    <p class="class-title">Private Classes</p>
+                </div>
+            </div>
+
+            <div class="h-container align-items-to-flex-start">
+                <div class="class-image-container align-items-to-flex-start">
+                    <a class="image-class-link" asp-area="" asp-controller="Home" asp-action="SpecialClasses">
+                        <img class="class-image"
+                             src="https://img11.postila.ru/data/71/32/a4/b6/7132a4b61429249aba9e5fa62435744bc5f24f16430b63e1ebf6ec1db4d901ef.jpg"
+                             alt="class-image" />
+                    </a>
+                    <p class="class-title central-on-top">Special Classes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

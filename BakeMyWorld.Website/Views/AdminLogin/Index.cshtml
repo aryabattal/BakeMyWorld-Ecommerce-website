@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Login as Administator";
+}
+
+<link rel="stylesheet" href="~/css/components/register-components.css" />
+
+<div class="registration-form-container">
+    <div class="user">
+        <header class="user__header">
+            <img src="https://image.flaticon.com/icons/png/128/11/11112.png"
+                 alt="" />
+            <h1 class="user__title">Log in as Administrator</h1>
+        </header>
+
+        <form class="form" asp-area="" asp-controller="AdminLogin" asp-action="Login" method="post">
+            <div class="form-group">
+                <input id="username"
+                       name="adminName"
+                       type="text"
+                       placeholder="Username"
+                       class="form__input" />
+            </div>
+
+            <div class="form-group">
+                <input id="password"
+                       name="password"
+                       type="password"
+                       placeholder="Password"
+                       class="form__input" />
+            </div>
+
+            <div class="form-group">
+                <input type="hidden" name="targetAdminName" value=@ViewBag.AdminName />
+                <input type="hidden" name="targetPassword" value=@ViewBag.Password />
+                <button class="btn" id="login-button" type="submit">Login</button>
+            </div>
+            
+
+        </form>
+    </div>
+</div>

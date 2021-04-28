@@ -1,0 +1,26 @@
+﻿@model BakeMyWorld.Website.Data.Entities.Category
+
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.Name);
+}
+
+<div>
+    <h1>Category</h1>
+    <h2>@Html.DisplayFor(model => model.Name)</h2>
+    <img src="@Html.DisplayFor(model => model.ImageUrl)" style="width:300px;"/>
+
+    <br />
+    <br />
+
+    <h3>Cakes</h3>
+    <ul>
+        @foreach (var item in Model.Cakes)
+        {
+            <li>@item.Name, @item.Price SEK</li>
+        }
+    </ul>  
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

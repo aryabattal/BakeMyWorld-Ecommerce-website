@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Cake>
+
+
+<link rel="stylesheet" href="~/css/components/category-components.css"/>
+<h1 class="text-center main-content">Search results:</h1>
+
+<div class="grid-container product-grid">
+    @foreach (var cake in Model)
+    {
+        <a asp-route="cakedetails" asp-route-urlSlug="@cake.UrlSlug">
+            <div class="product-container">
+                <img class="product-img"
+                     src="@cake.ImageUrl"
+                     alt="product" />
+                <div class="h-container justify-content-between">
+                    <span class="product-name">@cake.Name</span>
+                    <span class="product-name">@cake.Price SEK</span>
+                </div>
+            </div>
+        </a>
+    }
+</div>

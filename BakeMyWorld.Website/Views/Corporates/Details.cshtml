@@ -1,0 +1,32 @@
+﻿@model BakeMyWorld.Website.Data.Entities.Corporate
+
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.Name);
+}
+
+
+<link rel="stylesheet" href="~/css/components/corporate-components.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<div class="v-container">
+    <img class="hero-img"
+         src="https://cdn.pixabay.com/photo/2016/07/18/19/29/dessert-1526599_1280.jpg"
+         alt="hero-img" />
+    <p class="central-on-top hero-text-style">@Html.DisplayFor(model => model.Name)</p>
+</div>
+<div class="grid-container product-grid">
+
+    @foreach (var cake in Model.Cakes)
+    {
+        <a asp-route="cakedetails" asp-route-urlSlug="@cake.UrlSlug">
+            <div class="product-container">
+                <img class="product-img"
+                     src="@cake.ImageUrl"
+                     alt="corporate-product"/>
+                <div>
+                    <span class="product-name">@cake.Name)</span>
+                    <span class="product-name">@cake.Price SEK</span>
+                </div>
+            </div>
+        </a>
+    }
+</div>
